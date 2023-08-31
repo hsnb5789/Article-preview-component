@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    --Very_Dark_Grayish_Blue: hsl(217, 19%, 35%);
+    --Desaturated_Dark_Blue: hsl(214, 17%, 51%);
+    --Grayish_Blue: hsl(212, 23%, 69%);
+    --Light_Grayish_Blue: hsl(210, 46%, 95%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 375px;
+    max-width: 1440px;
+    margin: auto;
+    background-color: var(--Light_Grayish_Blue);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    margin-top: 3rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 340px;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.article-container {
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+.article-container h1 {
+    font-size: 18px;
+    color: var(--Very_Dark_Grayish_Blue);
+    font-weight: 700;
+}
+
+.article-container p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--Desaturated_Dark_Blue);
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.profile-img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.profile-info h2 {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--Very_Dark_Grayish_Blue);
+}
+
+.profile-info h2 span {
+    color: var(--Desaturated_Dark_Blue);
+    font-weight: 500;
+}
+
+.profile-info .share-btn {
+    width: 40px;
+    height: 40px;
+    padding: 5px 0;
+    background-color: var(--Light_Grayish_Blue);
+    display: flex;
+    flex-direction: row;
+    border-radius: 50%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.share {
+    background-color: var(--Very_Dark_Grayish_Blue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem 2rem;
+    color: var(--Grayish_Blue);
+    position: absolute;
+    bottom: 0;
+    width: 340px;
+}
+
+.active {
+    display: none;
+}
+
+
+.share p {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.share .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+}
+
+.social-icons .share-btn1 {
+    margin-left: 38px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--Grayish_Blue);
+    color: #fff;
+    display: flex;
+    border-radius: 50%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.share-btn1 img {
+    color: #fff;
+}
+
+.bottom-triangle {
+    display: none;
+}
+
+@media screen and (min-width: 950px) {
+    .container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin-top: 0;
+        width: 680px;
+        overflow: unset;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+
+    .image-container img {
+        display: flex;
+        width: 250px;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+        border-radius: 10px 0 0px 10px;
+    }
+
+    .article-container h1 {
+        font-size: 1.25rem;
+    }
+
+    .article-container p {
+        font-size: 13px;
+    }
+
+    .profile-info {
+        margin: 0 0 10px 10px;
+    }
+
+    .share {
+        bottom: 5.5rem;
+        left: 31rem;
+        width: 250px;
+        border-radius: 15px;
+    }
+
+    .social-icons .share-btn1 {
+        display: none;
+    }
+
+    .bottom-triangle {
+        display: flex;
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        position: absolute;
+        top: 2.6rem;
+        left: 7rem;
+        border-top: 20px solid var(--Very_Dark_Grayish_Blue);
+    }
+
+    .share {
+        padding: 1rem;
+        width: 230px;
+    }
+
+    .share p {
+        font-size: 14px;
+    }
+
+
+}
